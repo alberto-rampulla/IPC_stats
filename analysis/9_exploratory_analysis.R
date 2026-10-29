@@ -14,8 +14,8 @@ if(!require(spatstat)) install.packages("spatstat")
 # if(!require(rnaturalearthdata)) install.packages("rnaturalearthdata")
 
 # caricamento dati
-war <- read.csv("war.csv")
-war_nf <- read.csv("IS_PAL_non_filtered.csv")
+war <- read.csv("analysis/war.csv")
+war_nf <- read.csv("analysis/IS_PAL_non_filtered.csv")
 
 war_nf |> group_by(year) |> count() |> 
   ggplot(aes(x = year, y = n)) + 
